@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173"
+    "start":"index.html"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
