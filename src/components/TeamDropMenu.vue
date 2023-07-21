@@ -3,8 +3,8 @@
     <div class="menu-block">
       <h1 class="menu-title">Goalkeepers</h1>
       <ul>
-        <li v-for="(goalkeeper, index) in GoalKeepers" :key="index">
-          {{ goalkeeper.FirstName + " " + goalkeeper.LastName + index }}
+        <li v-for="(goalkeeper, index) in goalKeepers" :key="index">
+          {{ goalkeeper.first_name + " " + goalkeeper.last_name + index }}
         </li>
       </ul>
     </div>
@@ -12,24 +12,24 @@
     <div class="menu-block">
       <h1 class="menu-title">Defenders</h1>
       <ul>
-        <li v-for="(defender, index) in Defenders" :key="index">
-          {{ defender.FirstName + " " + defender.LastName }}
+        <li v-for="(defender, index) in defenders" :key="index">
+          {{ defender.first_name + " " + defender.last_name }}
         </li>
       </ul>
     </div>
     <div class="menu-block">
       <h1 class="menu-title">Midfielders</h1>
       <ul>
-        <li v-for="(midfielder, index) in Midfielders" :key="index">
-          {{ midfielder.FirstName + " " + midfielder.LastName }}
+        <li v-for="(midfielder, index) in midfield" :key="index">
+          {{ midfielder.first_name + " " + midfielder.last_name }}
         </li>
       </ul>
     </div>
     <div class="menu-block">
       <h1 class="menu-title">Forwards</h1>
       <ul>
-        <li v-for="(forward, index) in Forwards" :key="index">
-          {{ forward.FirstName + " " + forward.LastName }}
+        <li v-for="(forward, index) in forwards" :key="index">
+          {{ forward.first_name + " " + forward.last_name }}
         </li>
       </ul>
     </div>
@@ -37,94 +37,27 @@
 </template>
 
 <script>
+import { PlayerStore } from "../store";
+
 export default {
-  data() {
-    return {
-      GoalKeepers: [
-        {
-          Id: 0,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 1,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 2,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 3,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-      ],
-      Defenders: [
-        {
-          Id: 0,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 1,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 2,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 3,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-      ],
-      Midfielders: [
-        {
-          Id: 0,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 1,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 2,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 3,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-      ],
-      Forwards: [
-        {
-          Id: 0,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 1,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-        {
-          Id: 2,
-          FirstName: "Alex",
-          LastName: "Mbua",
-        },
-      ],
-    };
+  setup() {
+    let playerStore = PlayerStore();
+    return { playerStore };
   },
+  computed: {
+    forwards() {
+      return this.playerStore.getPosition("FORWARD");
+    },
+    midfield() {
+      return this.playerStore.getPosition("MIDFIELDER");
+    },
+    defenders() {
+      return this.playerStore.getPosition("DEFENDER");
+    },
+    goalKeepers() {
+      return this.playerStore.getPosition("GK");
+    }
+  }
 };
 </script>
 

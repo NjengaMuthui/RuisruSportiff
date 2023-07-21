@@ -3,8 +3,17 @@ import MatchDropMenu from "./components/MatchDropMenu.vue";
 import { RouterLink, RouterView } from "vue-router";
 import TeamDropMenu from "./components/TeamDropMenu.vue";
 import Footer from "./components/footer.vue";
+import { PlayerStore } from "./store/index";
 
 export default {
+  setup() {
+    let playerStore = PlayerStore();
+    return { playerStore };
+  },
+  async mounted() {
+    console.log("Mounted method executing");
+    await this.playerStore.loadPlayers();
+  },
   data() {
     return {
       open: false
@@ -236,7 +245,7 @@ nav li {
     flex-direction: row;
     padding: 35px 20px 10px 20px;
     transition: top 0.6s ease;
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: "Archivo Narrow", sans-serif;
   }
   .team-menu {
     left: -290px;

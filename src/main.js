@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+import { createPinia } from "pinia";
 import { Tabs, Tab } from "vue3-tabs-component";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -11,7 +11,9 @@ import {
   faFacebook,
   faInstagram,
   faWhatsapp,
-  faPaypal
+  faPaypal,
+  faYoutube,
+  faTiktok
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faPhone,
@@ -28,6 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./assets/main.css";
+import axios from "axios";
 
 library.add(
   faFacebook,
@@ -44,13 +47,16 @@ library.add(
   faShield,
   faMoneyBillWave,
   faXmark,
-  faBars
+  faBars,
+  faYoutube,
+  faTiktok
 );
 const application = createApp(App);
 
 application.use(router);
-application.use(store);
+application.use(createPinia());
 application.component("font-awesome-icon", FontAwesomeIcon);
 application.component("tabs", Tabs);
 application.component("tab", Tab);
 application.mount("#app");
+axios.defaults.baseURL = "https://ruirusportiffacademy.com";

@@ -7,7 +7,7 @@
           <h1 class="overlay">Main Team Squad</h1>
         </div>
         <div class="pic-overlay" :class="{ isShowing: team1, notShow: !team1 }">
-          <img src="../assets/team2.jpg" alt="Team picture" />
+          <img src="../assets/backgound_image.jpg" alt="Team picture" />
           <h1 class="overlay">Main Team Squad</h1>
         </div>
         <div class="pic-overlay" :class="{ isShowing: team2, notShow: !team2 }">
@@ -38,7 +38,7 @@
     <section class="video-sec">
       <div class="video-wrapper">
         <iframe
-          src="https://www.youtube.com/embed/b0cCKR08wUo"
+          src="https://www.youtube.com/embed/WVhAP995qCU"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,7 +47,7 @@
       </div>
       <div class="video-wrapper">
         <iframe
-          src="https://www.youtube.com/embed/b0cCKR08wUo"
+          src="https://www.youtube.com/embed/8pgdklWUsUg"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -59,20 +59,13 @@
       <div class="wht-bac ruiru-bar">
         <h2 class="about-h">About</h2>
         <p class="about-p">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-          impedit id harum culpa temporibus porro! Voluptatibus nobis iste
-          deserunt voluptatem officiis, quasi velit provident aut reiciendis
-          modi, earum dolore eaque! Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Earum impedit id harum culpa temporibus porro!
-          Voluptatibus nobis iste deserunt voluptatem officiis, quasi velit
-          provident aut reiciendis modi, earum dolore eaque! Lorem ipsum, dolor
-          sit amet consectetur adipisicing elit. Earum impedit id harum culpa
-          temporibus porro! Voluptatibus nobis iste deserunt voluptatem
-          officiis, quasi velit provident aut reiciendis modi, earum dolore
-          eaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-          impedit id harum culpa temporibus porro! Voluptatibus nobis iste
-          deserunt voluptatem officiis, quasi velit provident aut reiciendis
-          modi, earum dolore eaque!
+          Ruiru Sportiff football club was founded and formed in December 2018
+          with 8 players and started training in January 2018 for the
+          preparations of the league. The club has organically grown to over 50
+          players from all ages. We have different age groups represented in the
+          club. Under 10, under 15, and also senior representation who are under
+          30. As of....
+          <a href="aboutus" class="about-r">Continue reading</a>
         </p>
       </div>
       <div class="grid-box">
@@ -114,14 +107,16 @@ export default {
     return {
       Testimonials: [
         {
-          Name: "Alex Mbua 1",
+          img: "6_small.jpg",
+          Name: "Alex Mbua",
           Role: "Team Captain",
           ShortMessage:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optullam aperiam sint asperiores sequi explicabo delectus.",
+            "Leading the team and watching it grow has been one of the highlights of my football career",
           LongMessage:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animiexercitationem aliquam voluptatum culpa reiciendis nam accusantium, numquam error ex qui quos doloremque, laboriosam enim assumendaincidunt! Repellat quae praesentium autem! Lorem ipsum dolor sitamet consectetur adipisicing elit. Inventore minus iste blanditiisillum, accusantium ad reiciendis quis excepturi cumque vel ratione?Fugit ut magnam tempore quod aspernatur rerum ad quia!"
+            "I was one of the first people to join the club when it was first formed and have been a member since then, it has been quite the jouney and experience being part of a community "
         },
         {
+          img: "6_small.jpg",
           Name: "Alex Mbua 2",
           Role: "Team Captain",
           ShortMessage:
@@ -130,6 +125,7 @@ export default {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animiexercitationem aliquam voluptatum culpa reiciendis nam accusantium, numquam error ex qui quos doloremque, laboriosam enim assumendaincidunt! Repellat quae praesentium autem! Lorem ipsum dolor sitamet consectetur adipisicing elit. Inventore minus iste blanditiisillum, accusantium ad reiciendis quis excepturi cumque vel ratione?Fugit ut magnam tempore quod aspernatur rerum ad quia!"
         },
         {
+          img: "6_small.jpg",
           Name: "Alex Mbua 3",
           Role: "Team Captain",
           ShortMessage:
@@ -138,6 +134,7 @@ export default {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animiexercitationem aliquam voluptatum culpa reiciendis nam accusantium, numquam error ex qui quos doloremque, laboriosam enim assumendaincidunt! Repellat quae praesentium autem! Lorem ipsum dolor sitamet consectetur adipisicing elit. Inventore minus iste blanditiisillum, accusantium ad reiciendis quis excepturi cumque vel ratione?Fugit ut magnam tempore quod aspernatur rerum ad quia!"
         },
         {
+          img: "6_small.jpg",
           Name: "Alex Mbua 4",
           Role: "Team Captain",
           ShortMessage:
@@ -146,6 +143,7 @@ export default {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animiexercitationem aliquam voluptatum culpa reiciendis nam accusantium, numquam error ex qui quos doloremque, laboriosam enim assumendaincidunt! Repellat quae praesentium autem! Lorem ipsum dolor sitamet consectetur adipisicing elit. Inventore minus iste blanditiisillum, accusantium ad reiciendis quis excepturi cumque vel ratione?Fugit ut magnam tempore quod aspernatur rerum ad quia!"
         },
         {
+          img: "6_small.jpg",
           Name: "Alex Mbua 4",
           Role: "Team Captain",
           ShortMessage:
@@ -191,6 +189,9 @@ export default {
 </script>
 
 <style scoped>
+.about-r {
+  position: absolute;
+}
 .isShowing {
   display: block;
 }
@@ -292,6 +293,7 @@ export default {
 .about-p {
   padding: 0 90px 30px 90px;
   margin: 10px 10px 30px 15px;
+  position: relative;
 }
 .head {
   overflow: hidden;

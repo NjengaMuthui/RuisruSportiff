@@ -21,15 +21,11 @@
         label_name
       }}</label>
     </div>
-    <button @click="switchComponent" class="currency-button d-button">
-      Pay Here
-    </button>
+    <button class="currency-button d-button">Pay Here</button>
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
-
 export default {
   data() {
     return {
@@ -40,9 +36,6 @@ export default {
     label_name() {
       return this.payment_option ? "Email Address" : "Phone Number";
     }
-  },
-  methods: {
-    ...mapMutations(["switchComponent"])
   }
 };
 </script>

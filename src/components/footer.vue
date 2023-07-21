@@ -14,6 +14,7 @@
             target="_blank"
           >
             <font-awesome-icon class="icon" icon="fa-brands fa-facebook" />
+            facebook
           </a>
         </li>
         <li>
@@ -24,6 +25,18 @@
         <li>
           <a href="#"
             ><font-awesome-icon class="icon" icon="fa-solid fa-envelope"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@RUIRUSPORTIFFACADEMY"
+            target="_blank"
+            ><font-awesome-icon class="icon" icon="fa-brands fa-youtube"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@ruirusportiff" target="_blank"
+            ><font-awesome-icon class="icon" icon="fa-brands fa-tiktok"
           /></a>
         </li>
       </ul>

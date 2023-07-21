@@ -28,10 +28,7 @@
             >Amount</label
           >
         </div>
-        <button
-          @click="switchComponent"
-          class="currency-button custom-currency"
-        >
+        <button class="currency-button custom-currency">
           <font-awesome-icon icon="fa-solid fa-money-bill-wave" />
         </button>
       </div>
@@ -39,14 +36,7 @@
   </div>
 </template>
 
-<script>
-import { mapMutations } from "vuex";
-export default {
-  methods: {
-    ...mapMutations(["switchComponent"])
-  }
-};
-</script>
+<script></script>
 
 <style>
 .custom-amount {

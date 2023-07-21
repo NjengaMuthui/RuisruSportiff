@@ -17,14 +17,8 @@
 <script>
 import DonateSelect from "./DonateSelect.vue";
 import DonateEnter from "./DonateEnter.vue";
-import store from "../store";
 export default {
-  components: { DonateSelect, DonateEnter },
-  computed: {
-    activeComponent() {
-      return store.state.donate_component;
-    }
-  }
+  components: { DonateSelect, DonateEnter }
 };
 </script>
 

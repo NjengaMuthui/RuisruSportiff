@@ -1,15 +1,16 @@
 <template>
   <div class="player-avatar ruiru-bar card-default">
-    <div class="banner"></div>
-    <span class="banner-label">Academy Player</span>
-    <img src="../assets/nzuka.png" alt="player name" />
+    <!--<div v-show="Player.isAcademy" class="banner"></div>
+    <span v-show="Player.isAcademy" class="banner-label">Academy Player</span>
+    -->
+    <img :src="pImage" alt="player name" />
     <div class="player-flex">
       <div>
-        <p class="name first">{{ Player.FirstName }}</p>
-        <p class="name">{{ Player.LastName }}</p>
+        <p class="name first">{{ Player.first_name }}</p>
+        <p class="name">{{ Player.last_name }}</p>
       </div>
       <div class="kit-number">
-        <span>44</span>
+        <span>{{ Player.number }}</span>
       </div>
     </div>
   </div>
@@ -18,6 +19,11 @@
 <script>
 export default {
   props: { Player: Object },
+  computed: {
+    pImage() {
+      return "src/assets/" + this.Player.img;
+    }
+  }
 };
 </script>
 
@@ -45,6 +51,7 @@ export default {
 }
 .player-avatar {
   position: relative;
+  font-family: "Archivo Narrow";
 }
 .player-flex {
   display: flex;

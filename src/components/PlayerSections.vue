@@ -23,13 +23,12 @@ export default {
 <style scoped>
 .create-space {
   padding: 30px 20px;
-  margin: 0 0 30px 0;
 }
 .player-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: 20px;
 }
